@@ -26,6 +26,7 @@ def details(request, slug): #usa quando a url for slug
             context['is_valid'] = True
             # print(form.cleaned_data['name'])#pega valores do formulario
             # print(form.cleaned_data['message'])
+            form.send_mail(course)
             form = ContactCourse()
     else:
         form = ContactCourse()
